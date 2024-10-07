@@ -19,7 +19,7 @@
 ;;
 ;;; Code:
 
-()
+(load-file "cageparser.el")
 
 (provide 'cage)
 ;;; cage.el ends here
