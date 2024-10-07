@@ -22,6 +22,17 @@
 ;;--------------------------------------------------------------
 ;; CHROME DEVTOOL PROTOCOL 系
 ;;--------------------------------------------------------------
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
+;; WEB AUTOMATION
+(cl-defun start-webgamen (&optional (thunk (lambda () nil)))
+  (interactive)
+  (setq async-shell-command-display-buffer nil)
+  (setq async-shell-command-buffer nil)
+  ;; (shell-command)では、PATHがリモートになってしまうので、
+  ;; ここだけ、(call-process-shell-command)でよぶ。
+  (call-process-shell-command "chromium --remote-debugging-port=9222 &")
+  (funcall thunk))
+
 (defun launch-chromium-with-debuggin-port ()
   (async-shell-command "chromium --remote-debugging-port=9222" nil nil))
 
