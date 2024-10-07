@@ -20,6 +20,8 @@
 ;;; Code:
 
 (load-file "~/uniemacs/cageparser.el")
+(load-file "~/uniemacs/nakama.el")
+(load-file "~/uniemacs/chromium.el")
 
 ;;-------------------------------------------------------------
 ;; 文字列操作
