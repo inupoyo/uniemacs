@@ -1,8 +1,14 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
 #+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
 
+特定のサーバ上でシェルを動かしたいときに、まず、設定ファイルをつくってください。
 
+#+begin_src bash
+mkdir ~/uniemacs/servers/
+touch
+#+end_src
 
+* 設定ファイルの例
 
 #+begin_example
 title = "設定ファイルのたいとる"
@@ -35,3 +41,9 @@ batch = "~/.doom.d/templates/something"
 [doorway]
 front = "/ssh:something@someone:"
 #+end_example
+
+* 使用例
+#+begin_src emacs-lisp
+(server-conf-get-value :doorway "front")
+#+end_src
+とかすると、"/ssh:something@someone:"がかえってきたりする。

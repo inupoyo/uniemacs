@@ -28,8 +28,7 @@
 
 (defun load-server-setting (sname)
  (toml2sexp
-  (f-read (format "~/.doom.d/servers/%s" sname))))
-
+  (f-read (format "~/uniemacs/servers/%s" sname))))
 
 (defun clsr (acm)
   (lambda (x)
