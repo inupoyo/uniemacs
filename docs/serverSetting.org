@@ -1,6 +1,22 @@
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
 #+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
 
+* SSH で接続したい
+emacs に標準搭載されている TRAMP の機能をつかって、簡単に接続できます。
+適当な.el ファイルを作成して、
+#+begin_src emacs-lisp
+(find-file "/ssh:iroku@iroku:/home/")
+#+end_src
+として、
+#+begin_example
+<SPC> m e d
+#+end_example
+を SEXP 上でおしたら、サーバにはいれます。
+
+#+RESULTS:
+: #<buffer home>
+
+* SSH （cage.el のやりかた）の設定ファイル
 特定のサーバ上でシェルを動かしたいときに、まず、設定ファイルをつくってください。
 
 #+begin_src bash
@@ -8,7 +24,7 @@ mkdir ~/uniemacs/servers/
 touch
 #+end_src
 
-* 設定ファイルの例
+** 設定ファイルの例
 
 #+begin_example
 title = "設定ファイルのたいとる"
@@ -42,7 +58,7 @@ batch = "~/.doom.d/templates/something"
 front = "/ssh:something@someone:"
 #+end_example
 
-* 使用例
+** 使用例
 #+begin_src emacs-lisp
 (server-conf-get-value :doorway "front")
 #+end_src
