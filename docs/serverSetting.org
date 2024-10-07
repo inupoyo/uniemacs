@@ -5,7 +5,7 @@
 emacs に標準搭載されている TRAMP の機能をつかって、簡単に接続できます。
 適当な.el ファイルを作成して、
 #+begin_src emacs-lisp
-(find-file "/ssh:iroku@iroku:/home/")
+(find-file "/ssh:bar@foo:/home/")
 #+end_src
 として、
 #+begin_example
