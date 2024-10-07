@@ -1,0 +1,15 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
+#+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
+
+* chromium
+ウェブ系の機能は CHROME DEVTOOL PROTOCOL を使うので chromium をいれてください。
+以下は勘でかいたインストール方法です。
+
+** windows
+#+begin_src bash
+sudo apt install chromium
+#+end_src
+** macOS
+#+begin_src bash
+brew install chromium
+#+end_src
