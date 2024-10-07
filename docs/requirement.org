@@ -13,3 +13,11 @@ sudo apt install chromium
 #+begin_src bash
 brew install chromium
 #+end_src
+
+
+* emacs-websocket
+EMACS WEBSOCKET がないと、DEVTOOL PROTOCOL で通信できない。
+いつかは、これを取り込みたい。
+#+begin_src bash
+git clone https://github.com/ahyatt/emacs-websocket.git
+#+end_src
