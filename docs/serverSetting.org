@@ -1,0 +1,37 @@
+#+HTML_HEAD: <link rel="stylesheet" type="text/css" href="style1.css" />
+#+HTML_HEAD_EXTRA: <link rel="alternate stylesheet" type="text/css" href="style2.css" />
+
+
+
+
+#+begin_example
+title = "設定ファイルのたいとる"
+
+[editor]
+name = "your name"
+mail = "your email adress"
+
+[server]
+hostname = ""
+username = ""
+ports = []
+
+[database]
+lv3 = ""
+logdir = ""
+logdirfullpath = "/ssh:hostname@username:/home/whatever"
+tmpdir = "~/tmp"
+workdir = "/home/wahtsoever"
+appdir = "~/"
+layout = "~/"
+stylesheet = "~/"
+
+[auth]
+user = [something@someone , password]
+
+[template]
+batch = "~/.doom.d/templates/something"
+
+[doorway]
+front = "/ssh:something@someone:"
+#+end_example
